@@ -1,0 +1,26 @@
+.offer-banner-container{
+    width: 100%;
+    height: 250px;
+    padding: 15px 10px;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("/src/assets/Offer-bg.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.offer-banner-container .offer-row{
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+.offer-banner-container .offer-row h1{
+    color: var(--fcolor);
+}
+.offer-banner-container .offer-row p{
+    margin-bottom: 10px;
+}
+@media (max-width:600px) {
+    .offer-banner-container .offer-row{
+        top: 80px;
+        left: 50px;
+    }
+}

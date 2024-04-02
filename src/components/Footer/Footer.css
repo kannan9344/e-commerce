@@ -1,0 +1,61 @@
+.footer {
+  width: 100%;
+  padding: 0px 10px;
+  background-color: black;
+}
+.footer .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+}
+.footer .row .col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .row .col h2 {
+  color: var(--w);
+}
+.footer .row .col p {
+  font-size: 14px;
+  color: var(--w);
+  opacity: 0.5;
+}
+.footer .row .col div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer .row .col div .fa-envelope {
+  color: var(--primary);
+}
+.footer .row .col div .fa-phone {
+  color: blue;
+}
+.footer .row .col strong {
+  text-align: start;
+  color: var(--w);
+}
+.footer .row .col .list {
+  color: var(--w);
+}
+.footer .row .col img {
+  width: 70px;
+  height: 70px;
+}
+.footer .row .col .media-icons .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.media-icons .icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
