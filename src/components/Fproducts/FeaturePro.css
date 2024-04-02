@@ -128,3 +128,8 @@
 .row .col .icons div:nth-child(3) {
   transition-delay: 0.5s;
 }
+@media all and (max-width:600px) {
+  .feature-products .row {
+    padding: 0px 20px;
+  }
+}
