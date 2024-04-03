@@ -16,14 +16,14 @@
 .modal .modal-dialogue {
   width: 700px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
   background-color: var(--w);
   border-radius: 5px;
   padding: 10px;
   position: relative;
   transition: 0.5s;
-  animation: fade-up 2s forwards;
+  animation: fade-up 1s forwards;
 }
 @keyframes fade-up {
   0% {
@@ -36,6 +36,12 @@
 .modal .modal-dialogue .col {
     height: 400px;
   position: relative;
+}
+.modal .modal-dialogue .col:nth-child(1){
+  border: 1px solid #eee;
+}
+.modal .modal-dialogue .col:nth-child(2){
+  padding-top: 50px;
 }
 .modal .modal-dialogue .col .modal-img {
   width: 100%;
@@ -116,4 +122,42 @@
 .modal .modal-dialogue .col .btn.cart-btn {
   background-color: var(--secondary);
   color: var(--fcolor);
+}
+@media all and (max-width:600px) {
+  .modal .modal-dialogue {
+    width: 340px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .modal .modal-dialogue .col{
+    height:220px;
+  }
+  .modal .modal-dialogue .col .name {
+    margin-bottom: 5px;
+  }
+  .modal .modal-dialogue .col .btn {
+    height: 30px;
+    line-height: 24px;
+  }
+  .modal .modal-dialogue .col .name {
+    font-weight: 600;
+    font-size:var(--f5);
+  }
+  .modal .modal-dialogue .col p {
+    font-size: 13px;
+  }
+  .modal .modal-dialogue .close-btn {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+  }
+  .modal .modal-dialogue .col .modal-btns div {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .modal .modal-dialogue .col:nth-child(2){
+    padding-top: 20px;
+  }
 }

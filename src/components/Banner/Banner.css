@@ -33,7 +33,7 @@
 }
 .banner-content h1 {
   color: var(--w);
-  font-size:2.5rem;
+  font-size:var(--f2);
 }
 .banner-content .btn {
   display: inline-block;
@@ -67,6 +67,25 @@
   color: var(--fcolor);
   cursor: pointer;
 }
+.banner .dots{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+.banner .dots .dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--w);
+}
+.banner .dots .dot.active{
+  background-color: var(--primary);
+}
 @media all and (max-width: 600px) {
   .banner-container {
     padding: 0px 20px;
@@ -76,27 +95,16 @@
     bottom: 30px;
     left: 30px;
   }
-  .banner .btns {
-    width: fit-content;
-    height: fit-content;
-    gap: 15px;
-    transform: none;
-    left: 430px;
-    top: 430px;
+  .banner .btns{
+    display: none;
   }
   .btns div {
     flex: none;
   }
-  /* .banner-content h1 {
-    font-size: 30px;
-  } */
+  .banner-content h1 {
+    font-size:var(--f4);
+  }
   .banner-content .btn {
     padding: 5px 20px;
   }
-}
-
-@media all and (max-width: 800px) {
-  /* .banner-content h1 {
-    font-size: 30px;
-  } */
 }

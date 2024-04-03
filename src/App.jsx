@@ -6,8 +6,8 @@ import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Pages/Cart/Cart";
 import Favorite from "./Pages/Favorite/Favorite";
-import Footer from "./components/Footer/Footer";
 import { createContext, useState } from "react";
+import Footer from "./Pages/Footer/Footer";
 
 export const ContentData=createContext();
 function App() {

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const FeatureProList = ({ product }) => {
+const FeatureProList = ({ product,modalstate,setModalstate,setModalpro}) => {
   const value = Math.round(product.rate - product.discount);
+  const addModalpro=()=>{
+    setModalstate(!modalstate);
+    setModalpro(product);
+  }
   return (
     <div className="col">
       <div className="image">
@@ -34,7 +38,7 @@ const FeatureProList = ({ product }) => {
         <div className="icon">
           <i className="fa fa-shopping-cart"></i>
         </div>
-        <div className="icon">
+        <div className="icon" onClick={addModalpro}>
           <i className="fa fa-eye"></i>
         </div>
       </div>

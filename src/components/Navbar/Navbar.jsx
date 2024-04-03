@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "../Navbar/Navbar.css";
+import Logo from "/src/assets/logo.png"
 import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [toggle,setToggle]=useState(false);
@@ -9,7 +10,9 @@ const Navbar = () => {
   return (
     <div className='navbar'>
         <div className="logo">
-        <Link to={"/"}>SHOP</Link>
+        <Link to={"/"}>
+            <img src={Logo} alt="" />
+        </Link>
         </div>
         <div className="search-bar">
             <input type="text" />

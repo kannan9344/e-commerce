@@ -28,11 +28,9 @@
   align-items: center;
   gap: 10px;
 }
-.footer .row .col div .fa-envelope {
-  color: var(--primary);
-}
-.footer .row .col div .fa-phone {
-  color: blue;
+.footer .row .col div .fa-envelope ,
+.footer .row .col div .fa-phone{
+ color: var(--w);
 }
 .footer .row .col strong {
   text-align: start;
@@ -40,6 +38,11 @@
 }
 .footer .row .col .list {
   color: var(--w);
+}
+.footer .row .col .images{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .footer .row .col img {
   width: 70px;
@@ -58,4 +61,9 @@
 }
 .media-icons .icon:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+@media all and (max-width:600px) {
+  .footer{
+    padding: 0px 15px;
+  }
 }
