@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding:0px 10px;
   position: relative;
+  border-bottom: 1px solid #eee;
 }
 .navbar .logo img{
   width: 70px;
@@ -99,7 +100,7 @@
     padding: 20px;
     padding-top: 80px;
     flex-direction: column;
-    top: 70px;
+    top: 90px;
     border-radius: 5px;
     right: -350px;
     gap: 20px;
@@ -125,7 +126,7 @@
     padding: 20px;
     padding-top: 80px;
     flex-direction: column;
-    top: 70px;
+    top: 90px;
     right: -350px;
     border-radius: 5px;
     gap: 20px;

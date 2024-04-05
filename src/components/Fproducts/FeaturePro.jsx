@@ -1,20 +1,22 @@
 import "../Fproducts/FeaturePro.css";
 import Fproducts from "../Fproducts/Fproducts.js";
 import FeatureProList from "./FeatureProList";
-const FeaturePro = ({ modalstate, setModalstate,modalpro,setModalpro }) => {
+import { ContentData } from "../../App";
+import { useContext } from "react";
+const FeaturePro = () => {
+  const {setData,setImage,setCart,setFav}=useContext(ContentData);
   return (
     <div className="feature-products">
       <h3>Feature Products</h3>
-      <div className="row mobile lap">
-        {Fproducts.map((product,index) => (
+      <div className="row">
+        {Fproducts.map((product) => (
           <FeatureProList
-          index={index}
-            setModalstate={setModalstate}
-            modalstate={modalstate}
             product={product}
             key={product.id}
-            modalpro={modalpro}
-            setModalpro={setModalpro}
+            setData={setData}
+            setImage={setImage}
+            setCart={setCart}
+            setFav={setFav}
           />
         ))}
       </div>

@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import "../Navbar/Navbar.css";
 import Logo from "/src/assets/logo.png"
 import { Link } from 'react-router-dom';
+import { ContentData } from '../../App';
 const Navbar = () => {
+    const { cart,fav} = useContext(ContentData);
     const [toggle,setToggle]=useState(false);
     const toggleMenu=()=>{
         setToggle(!toggle);
@@ -20,7 +22,6 @@ const Navbar = () => {
         </div>
         <ul className={toggle?"active":""}>
             <li><Link className='list' to={"/"}>Home</Link></li>
-            <li><Link className='list' to={"/About-us"}>About Us</Link></li>
             <li><Link className='list' to={"/Shop"}>Shop</Link></li>
             <li><Link className='list' to={"/Contact-us"}>Contact Us</Link></li>
         </ul>
@@ -28,18 +29,18 @@ const Navbar = () => {
        <Link to={"/Favorite"}>
        <div className="fav-icon">
             <i className='fa fa-heart'></i>
-            <span>0</span>
+            <span>{fav?fav.length:0}</span>
         </div>
        </Link>
        <Link to={"/Cart"}>
        <div className="cart-icon">
             <i className='fa fa-shopping-cart'></i>
-            <span>0</span>
+            <span>{cart?cart.length:0}</span>
         </div>
        </Link>
        </div>
        <div className="menu-bar" onClick={toggleMenu}>
-        {toggle?<i className='fa fa-close'></i>: <i className="fa-solid fa-bars"></i>}
+        {toggle?<i className='fa fa-close'></i>:<i className="fa-solid fa-bars"></i>}
        </div>
     </div>
   )

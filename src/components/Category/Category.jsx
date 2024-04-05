@@ -3,7 +3,7 @@ import fruit from "/src/assets/fruit.png";
 import vegetable from "/src/assets/vegetable.png";
 import dfruit from "/src/assets/dry-fruit.png";
 import meat from "/src/assets/meat.png";
-import milk from "/src/assets/milk.png";
+import milk from "/src/assets/milk-1.png";
 import CateList from "./CateList";
 const Category = () => {
     const data=[

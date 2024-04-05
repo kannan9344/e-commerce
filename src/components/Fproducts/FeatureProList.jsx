@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const FeatureProList = ({ product,modalstate,setModalstate,setModalpro}) => {
+const FeatureProList = ({ product,setImage,setData,setCart,setFav}) => {
   const value = Math.round(product.rate - product.discount);
-  const addModalpro=()=>{
-    setModalstate(!modalstate);
-    setModalpro(product);
+  const Adddata=()=>{
+    setData(product);
+    setImage(product.img);
   }
   return (
     <div className="col">
@@ -32,15 +33,17 @@ const FeatureProList = ({ product,modalstate,setModalstate,setModalpro}) => {
         <div className="discount">{product.discount}%</div>
       </div>
       <div className="icons">
-        <div className="icon">
+        <div className="icon" onClick={()=>setFav(product)} >
           <i className="fa-regular fa-heart"></i>
         </div>
-        <div className="icon">
+        <div className="icon" onClick={()=>setCart(product)} >
           <i className="fa fa-shopping-cart"></i>
         </div>
-        <div className="icon" onClick={addModalpro}>
-          <i className="fa fa-eye"></i>
-        </div>
+        <Link to={"/Product-details"}>
+        <div className="icon" onClick={Adddata}> 
+        <i className="fa fa-eye"></i>
+       </div>
+        </Link>
       </div>
     </div>
   );

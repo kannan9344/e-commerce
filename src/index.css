@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=Rubik:wght@300;400;500;600;700;800&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
 }
-:root{
-  --primary:#EB444B;
-  --secondary:rgb(155, 247, 6);
-  --light:#f1faea;
-  --fcolor:#0A2333;
-  --w:#fff;
-  --f1:3rem;
-  --f2:2.5rem;
-  --f3:2.3rem;
-  --f4:2rem;
-  --f5:1.5rem;
-  --f6:0.8rem;
+:root {
+  --primary: #eb444b;
+  --secondary: rgb(155, 247, 6);
+  --light: #e8fcd8;
+  --fcolor: #0a2333;
+  --w: #fff;
+  --f1: 3rem;
+  --f2: 2.5rem;
+  --f3: 2.3rem;
+  --f4: 2rem;
+  --f5: 1.5rem;
+  --f6: 0.8rem;
 }
 
