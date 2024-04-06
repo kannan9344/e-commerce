@@ -5,7 +5,6 @@ import Category from "../../components/Category/Category";
 import FeaturePro from "../../components/Fproducts/FeaturePro";
 import Offer_banner from "../../components/Offer-banner/Offer_banner";
 import Service from "../../components/Services/Service";
-// import { ContentData } from "../../App";
 
 const Home = () => {
   return (

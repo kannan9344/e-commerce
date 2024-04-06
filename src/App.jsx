@@ -16,10 +16,11 @@ function App() {
   const [image,setImage]=useState("");
   const [cart,setCart]=useState([]);
   const [fav,setFav]=useState([]);
+  const [total,setTotal]=useState(0);
   const [productdata,setproductData]=useState(Data);
   return (
     <div style={{ overflowX: "hidden" }}>
-      <ContentData.Provider value={{data,setData,image,setImage,cart,setCart,fav,setFav,productdata,setproductData}}>
+      <ContentData.Provider value={{data,setData,image,setImage,cart,setCart,fav,setFav,productdata,setproductData,total,setTotal}}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />

@@ -3,14 +3,14 @@ import "../Shop/Shop.css";
 import ShopList from "./ShopList.jsx";
 import { ContentData } from "../../App.jsx";
 const Shop = () => {
-  const { productdata, setproductData,setFav,setData,setImage,setCart} = useContext(ContentData);
+  const { productdata, setproductData,setFav,fav,setData,setImage,cart,setCart} = useContext(ContentData);
   const [filtered,setFiltered]=useState(productdata);
   const filterCategory=(category)=>{
     if(category=="All"){
       setproductData(filtered);
     }
     else{
-      let filterdata=filtered.filter((product)=>product.category==category);
+      let filterdata=filtered.filter((product)=>product.category==category || product.text==category);
       setproductData(filterdata);
     }
   }
@@ -49,25 +49,29 @@ const Shop = () => {
           </div>
           <strong>Related Names</strong>
           <div className="names">
-            <div className="name">Tomato</div>
-            <div className="name">Almond</div>
-            <div className="name">Meat</div>
-            <div className="name">Orange</div>
-            <div className="name">Mango</div>
-            <div className="name">Broccoli</div>
-            <div className="name">Cabbage</div>
+            <div className="name" onClick={()=>filterCategory("Broccoli")} >Broccoli</div>
+            <div className="name" onClick={()=>filterCategory("Capsicum")} >Capsicum</div>
+            <div className="name" onClick={()=>filterCategory("Apple")} >Apple</div>
+            <div className="name" onClick={()=>filterCategory("Cherry")} >Cherry</div>
+            <div className="name" onClick={()=>filterCategory("Cashew")} >Cashew</div>
+            <div className="name" onClick={()=>filterCategory("Appricot")} >Appricot</div>
+            <div className="name" onClick={()=>filterCategory("Lobster Meat")} >Lobster Meat</div>
+            <div className="name" onClick={()=>filterCategory("Goat Meat")} >Goat Meat</div>
+            <div className="name" onClick={()=>filterCategory("Egg")} >Egg</div>
+            <div className="name" onClick={()=>filterCategory("Milk")} >Milk</div>
           </div>
         </div>
         <div className="shop-col">
-          {productdata.map((productdata) => (
+          {productdata.map((product) => (
             <ShopList
-              productdata={productdata}
-              setproductData={setproductData}
-              key={productdata.id}
+              product={product}
+              key={product.id}
               setData={setData}
               setImage={setImage}
               setCart={setCart}
               setFav={setFav}
+              cart={cart}
+              fav={fav}
             />
           ))}
         </div>

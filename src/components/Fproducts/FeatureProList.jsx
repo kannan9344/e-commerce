@@ -1,11 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const FeatureProList = ({ product,setImage,setData,setCart,setFav}) => {
+const FeatureProList = ({ product,setImage,setData,setCart,cart,setFav,fav}) => {
   const value = Math.round(product.rate - product.discount);
   const Adddata=()=>{
     setData(product);
     setImage(product.img);
+  }
+  const addtoCart=()=>{
+    if(cart.includes(product)){
+      return;
+    }
+    else{
+      setCart([...cart,product]);
+    }
+  }
+  const addtoFav=()=>{
+    if(fav.includes(product)){
+      return;
+    }
+    else{
+      setFav([...fav,product]);
+    }
   }
   return (
     <div className="col">
@@ -33,10 +49,10 @@ const FeatureProList = ({ product,setImage,setData,setCart,setFav}) => {
         <div className="discount">{product.discount}%</div>
       </div>
       <div className="icons">
-        <div className="icon" onClick={()=>setFav(product)} >
+        <div className="icon" onClick={addtoFav} >
           <i className="fa-regular fa-heart"></i>
         </div>
-        <div className="icon" onClick={()=>setCart(product)} >
+        <div className="icon" onClick={addtoCart} >
           <i className="fa fa-shopping-cart"></i>
         </div>
         <Link to={"/Product-details"}>
