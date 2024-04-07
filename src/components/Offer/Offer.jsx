@@ -2,7 +2,6 @@ import fruit from "/src/assets/fruit_dis.jpg";
 import dry from "/src/assets/dry_dis.jpeg";
 import meat from "/src/assets/meat_dis.jpeg";
 import "../Offer/Offer.css";
-import Col from "./Col";
 
 const Offer = () => {
     const data=[
@@ -13,7 +12,17 @@ const Offer = () => {
   return (
     <div className='offer-container'>
         <div className="row">
-          {data.map((d,index)=><Col d={d} key={index}/>)}
+          {data.map((d,index)=>{
+            return(
+              <div className="col" style={{backgroundImage:`url(${d.img}`}} key={index}>
+              <div className="offer-content">
+                  <div className="name">{d.name}</div>
+                  <h3>{d.text}</h3>
+                  <div className="btn">Shop Now</div>
+              </div>
+              </div>
+            )
+          })}
         </div>
     </div>
   )
