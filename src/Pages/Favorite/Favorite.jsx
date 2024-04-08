@@ -8,6 +8,7 @@ const Favorite = () => {
   }
   return (
     <div className='fav-container'>
+      {fav.length?"":<h3>Your Favorite page is empty....</h3>}
       <div className="fav-row">
        {fav.map((favItem)=>{
         return  <div className="fav-col" key={favItem.id}>

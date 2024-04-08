@@ -13,6 +13,7 @@ const Shop = () => {
     cart,
     setCart,
   } = useContext(ContentData);
+  const [toggle,setToggle]=useState(false);
   const addData = (product) => {
     setData(product);
     setImage(product.img);
@@ -52,9 +53,12 @@ const Shop = () => {
   };
   return (
     <div className="shop-container">
+      <div className="top">
       <h2>SHOP</h2>
+      <div className="fil-btn" onClick={()=>setToggle(!toggle)} >Filter</div>
+      </div>
       <div className="shop-row">
-        <div className="shop-col">
+        <div className={toggle?"shop-col active":"shop-col"}>
           <strong>Categories</strong>
           <div className="shop-category">
             <div className="category" onClick={() => filterCategory("All")}>
