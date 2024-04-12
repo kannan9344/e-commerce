@@ -133,6 +133,9 @@
   .feature-products .row {
     padding: 10px 20px;
   }
+  .feature-products h3 {
+    padding-top: 15px;
+  }
   .row .col .image img {
     width: 190px;
     height: 190px;
