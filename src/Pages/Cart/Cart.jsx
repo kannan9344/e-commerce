@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../Cart/Cart.css";
 import { ContentData } from "../../App";
 import CartImage from "/src/assets/cart-image.png";
@@ -7,6 +7,9 @@ const Cart = () => {
   const deleteCart=(cartitem)=>{
     setCart(cart.filter((item)=>item.id !==cartitem.id));
 };
+useEffect(()=>{
+  setTotal(cart.reduce((acc,value)=>acc+value.rate,0))
+},[cart]);
   return (
     <div className="cart-container">
       {cart.length?"":<div className="empty-cart">
@@ -18,7 +21,7 @@ const Cart = () => {
           return(
             <div className="cart-col" key={cartitem.id} >
             <div className="image">
-              <img src={cartitem.img} alt="" />
+              <img src={cartitem.img} />
             </div>
             <div className="cart-text">
               <div className="cart-name">{cartitem.text}</div>

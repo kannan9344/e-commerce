@@ -137,4 +137,7 @@
     width: 190px;
     height: 190px;
   }
+  .row .col .icons div {
+    transform: translateX(0px);
+  }
 }

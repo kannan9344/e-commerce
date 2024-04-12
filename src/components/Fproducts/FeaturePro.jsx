@@ -4,9 +4,8 @@ import { ContentData } from "../../App";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 const FeaturePro = () => {
-  const {setData,setImage,setCart,cart,setFav,fav}=useContext(ContentData);
+  const {setImage,setCart,cart,setFav,fav}=useContext(ContentData);
   const Adddata=(product)=>{
-    setData(product);
     setImage(product.img);
   }
   const addtoCart=(product)=>{
@@ -62,7 +61,7 @@ const FeaturePro = () => {
               <div className="icon" onClick={()=>addtoCart(product)} >
                 <i className="fa fa-shopping-cart"></i>
               </div>
-              <Link to={"/Product-details"}>
+              <Link to={"/Product-details"} state={product} >
               <div className="icon" onClick={()=>Adddata(product)}> 
               <i className="fa fa-eye"></i>
              </div>

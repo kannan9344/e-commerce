@@ -8,14 +8,12 @@ const Shop = () => {
     setproductData,
     setFav,
     fav,
-    setData,
     setImage,
     cart,
     setCart,
   } = useContext(ContentData);
   const [toggle,setToggle]=useState(false);
   const addData = (product) => {
-    setData(product);
     setImage(product.img);
   };
   const addCart = (product) => {
@@ -195,6 +193,7 @@ const Shop = () => {
                   <Link
                     to={"/Product-details"}
                     onClick={() => addData(product)}
+                    state={product}
                   >
                     <div className="icon">
                       <i className="fa fa-eye"></i>
