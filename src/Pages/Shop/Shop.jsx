@@ -184,10 +184,10 @@ const Shop = () => {
                   <div className="discount">{product.discount}%</div>
                 </div>
                 <div className="icons">
-                  <div className="icon" onClick={() => addFav(product)}>
+                  <div className={fav.includes(product)?"icon active":"icon"} onClick={() => addFav(product)}>
                     <i className="fa-regular fa-heart"></i>
                   </div>
-                  <div className="icon" onClick={() => addCart(product)}>
+                  <div className={cart.includes(product)?"icon active":"icon"} onClick={() => addCart(product)}>
                     <i className="fa fa-shopping-cart"></i>
                   </div>
                   <Link

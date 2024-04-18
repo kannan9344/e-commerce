@@ -55,10 +55,10 @@ const FeaturePro = () => {
               <div className="discount">{product.discount}%</div>
             </div>
             <div className="icons">
-              <div className="icon" onClick={()=>addtoFav(product)} >
+              <div className={fav.includes(product)?"icon active":"icon"} onClick={()=>addtoFav(product)} >
                 <i className="fa-regular fa-heart"></i>
               </div>
-              <div className="icon" onClick={()=>addtoCart(product)} >
+              <div className={cart.includes(product)?"icon active":"icon"} onClick={()=>addtoCart(product)} >
                 <i className="fa fa-shopping-cart"></i>
               </div>
               <Link to={"/Product-details"} state={product} >

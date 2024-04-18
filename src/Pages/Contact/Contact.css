@@ -40,3 +40,8 @@
         height: fit-content;
     }
 }
+@media all and (min-width:600px) {
+    .contact-container .contact-row{
+        height: fit-content;
+    }
+}
